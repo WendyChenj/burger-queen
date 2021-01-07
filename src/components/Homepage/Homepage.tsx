@@ -13,7 +13,7 @@ const Homepage = () => {
           burger. Or if you prefer to choose existing burgers, we do have 15 options for you!
         </h4>
 
-        <h4>Don’t forget to check daily deals! Save your money by applying coupons!</h4>
+        <h4 className="intro-2">Don’t forget to check daily deals! Save your money by applying coupons!</h4>
 
         <button>Start to order</button>
       </div>

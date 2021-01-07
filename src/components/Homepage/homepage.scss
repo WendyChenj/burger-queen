@@ -28,6 +28,7 @@
 
   h1 {
     font-size: 4rem;
+    animation: 3.5s ease fade-in;
   }
 
   h4 {
@@ -37,6 +38,11 @@
 
   h4.intro {
     margin-top: 64px;
+    animation: 4.5s ease fade-in;
+  }
+
+  h4.intro-2 {
+    animation: 5.5s ease fade-in;
   }
 
   button {
@@ -46,5 +52,16 @@
     background-color: #000000;
     padding: 16px 40px;
     border: none;
+  }
+
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
   }
 }
