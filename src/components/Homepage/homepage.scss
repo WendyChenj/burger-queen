@@ -1,0 +1,50 @@
+@import '../../global';
+
+.container {
+  font-family: $passion-one;
+  position: relative;
+  height: 100vh;
+  overflow: scroll;
+}
+
+.burgerBackground {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background-image: url('../../assets/burger.jpg');
+  background-size: 100% 100%;
+  opacity: 0.5;
+  z-index: -1;
+}
+
+.main {
+  position: absolute;
+  width: 940px;
+  top: 10%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  h1 {
+    font-size: 4rem;
+  }
+
+  h4 {
+    font-size: 2rem;
+    margin: 32px 0 64px;
+  }
+
+  h4.intro {
+    margin-top: 64px;
+  }
+
+  button {
+    font-family: $font-cookie;
+    font-size: 2rem;
+    color: #ffffff;
+    background-color: #000000;
+    padding: 16px 40px;
+    border: none;
+  }
+}
