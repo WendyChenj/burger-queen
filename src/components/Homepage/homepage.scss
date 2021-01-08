@@ -45,6 +45,15 @@
     animation: 5.5s ease fade-in;
   }
 
+  @keyframes fade-in {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+
   button {
     font-family: $font-cookie;
     font-size: 2rem;
@@ -54,14 +63,7 @@
     border: none;
   }
 
-  @keyframes fade-in {
-    0% {
-      opacity: 0;
-      transform: scale(0);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
-    }
+  button:hover {
+    cursor: pointer;
   }
 }
