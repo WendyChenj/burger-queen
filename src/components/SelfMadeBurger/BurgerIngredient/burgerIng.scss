@@ -1,0 +1,167 @@
+@import '../../../global';
+
+.burgerTop {
+  height: 60px;
+  width: 280px;
+  background: linear-gradient(#bc581e, #e27b36);
+  border-radius: 50% 50% 0 0;
+  box-shadow: inset -15px 0 #c15711;
+  margin: 2px auto;
+  position: relative;
+}
+
+.burgerBottom {
+  height: 60px;
+  width: 300px;
+  background: linear-gradient(#f08e4a, #e27b36);
+  border-radius: 0 0 30px 30px;
+  box-shadow: inset -15px 0 #c15711;
+  margin: 2px auto;
+}
+
+.sandwitchTop {
+  height: 64px;
+  width: 300px;
+  background: linear-gradient(#bc581e, #e27b36);
+  border-radius: 30px 30px 0 0;
+  box-shadow: inset -15px 0 #c15711;
+  margin: 2px auto;
+  position: relative;
+}
+
+.sandwitchBottom {
+  height: 60px;
+  width: 300px;
+  background: linear-gradient(#f08e4a, #e27b36);
+  border-radius: 0 0 30px 30px;
+  box-shadow: inset -15px 0 #c15711;
+  margin: 2px auto;
+}
+
+.seeds1 {
+  width: 10%;
+  height: 15%;
+  position: absolute;
+  background-color: white;
+  left: 30%;
+  top: 50%;
+  border-radius: 40%;
+  transform: rotate(-20deg);
+  box-shadow: inset -2px -3px #c9c9c9;
+}
+
+.seeds1:after {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  left: -170%;
+  top: -260%;
+  border-radius: 40%;
+  transform: rotate(60deg);
+  box-shadow: inset -1px 2px #c9c9c9;
+}
+
+.seeds1:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  left: 180%;
+  top: -50%;
+  border-radius: 40%;
+  transform: rotate(60deg);
+  box-shadow: inset -1px -3px #c9c9c9;
+}
+
+.seeds2 {
+  width: 10%;
+  height: 15%;
+  position: absolute;
+  background-color: white;
+  left: 64%;
+  top: 50%;
+  border-radius: 40%;
+  transform: rotate(10deg);
+  box-shadow: inset -3px 0 #c9c9c9;
+}
+
+.seeds2:before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  background-color: white;
+  left: 150%;
+  top: -130%;
+  border-radius: 40%;
+  transform: rotate(90deg);
+  box-shadow: inset 1px 3px #c9c9c9;
+}
+
+.sandwitchBottom {
+  height: 60px;
+  width: 300px;
+  background: linear-gradient(#f08e4a, #e27b36);
+  border-radius: 0 0 30px 30px;
+  box-shadow: inset -15px 0 #c15711;
+  margin: 2px auto;
+}
+
+.beef {
+  height: 20px;
+  width: 80%;
+  background: linear-gradient(#7f3608, #702e05);
+  margin: 2px auto;
+  border-radius: 16px;
+}
+
+.chicken {
+  height: 20px;
+  width: 80%;
+  background: linear-gradient(#f3d5b5, #e7bc91);
+  margin: 2px auto;
+  border-radius: 16px;
+}
+
+.ham {
+  height: 10px;
+  width: 80%;
+  background: linear-gradient(#ffedd8, #f3d5b5);
+  margin: 2px auto;
+  border-radius: 16px;
+}
+
+.bacon {
+  height: 10px;
+  width: 80%;
+  background: linear-gradient(#bf3813, #c45e38);
+  margin: 2px auto;
+  border-radius: 16px;
+}
+
+.lettuce {
+  width: 85%;
+  height: 12px;
+  margin: 2px auto;
+  background: linear-gradient(#228c1d, #91ce50);
+  border-radius: 16px;
+}
+
+.tomato {
+  width: 85%;
+  height: 12px;
+  margin: 2px auto;
+  background: linear-gradient(#d00000, #dc2f02);
+  border-radius: 16px;
+}
+
+.pickle {
+  width: 85%;
+  height: 12px;
+  margin: 2px auto;
+  background: linear-gradient(#081c15, #1b4332);
+  border-radius: 16px;
+}
