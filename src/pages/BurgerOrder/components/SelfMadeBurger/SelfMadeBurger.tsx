@@ -1,13 +1,13 @@
 import React from 'react';
-import BurgerIngredient from './BurgerIngredient/BurgerIngredient';
+import Ingredient from '../Ingredient/Ingredient';
 import './selfMadeBurger.scss';
 
 const SelfMadeBurger = () => {
   return (
     <div className="self-made-container">
       <div className="burger-container">
-        <BurgerIngredient ingType="burgerTop" />
-        <BurgerIngredient ingType="burgerBottom" />
+        <Ingredient ingType="burgerTop" />
+        <Ingredient ingType="burgerBottom" />
       </div>
 
       <div className="ingredients-container">ingredients</div>

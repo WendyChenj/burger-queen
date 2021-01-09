@@ -1,8 +1,8 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Layout from '../Layout/Layout';
-import SelfMadeBurger from '../SelfMadeBurger/SelfMadeBurger';
-import ExistingBurger from '../ExistingBurger/ExistingBurger';
+import Layout from '../../common/components/Layout/Layout';
+import SelfMadeBurger from './components/SelfMadeBurger/SelfMadeBurger';
+import ExistingBurger from './components/ExistingBurger/ExistingBurger';
 import './burgerOrder.scss';
 
 const BurgerOrder = () => {

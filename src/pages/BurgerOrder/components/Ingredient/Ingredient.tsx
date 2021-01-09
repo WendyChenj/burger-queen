@@ -1,11 +1,11 @@
 import React from 'react';
-import './burgerIng.scss';
+import './Ingredient.scss';
 
 type Props = {
   ingType: string;
 };
 
-const BurgerIngredient = ({ ingType }: Props) => {
+const Ingredient = ({ ingType }: Props) => {
   let ingredient = null;
 
   switch (ingType) {
@@ -59,4 +59,4 @@ const BurgerIngredient = ({ ingType }: Props) => {
   return ingredient;
 };
 
-export default BurgerIngredient;
+export default Ingredient;

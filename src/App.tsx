@@ -1,7 +1,7 @@
 import React from 'react';
 import { Switch, Route } from 'react-router-dom';
-import Homepage from './components/Homepage/Homepage';
-import BurgerOrder from './components/BurgerOrder/BurgerOrder';
+import Homepage from './pages/Homepage/Homepage';
+import BurgerOrder from './pages/BurgerOrder/BurgerOrder';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
 import { faUserCircle, faCartPlus } from '@fortawesome/free-solid-svg-icons';

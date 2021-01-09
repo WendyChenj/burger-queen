@@ -2,7 +2,7 @@ import React from 'react';
 import { NavLink } from 'react-router-dom';
 
 import './layout.scss';
-import burgerLogo from '../../assets/burger-logo.png';
+import burgerLogo from '../../../assets/burger-logo.png';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 type Props = {
