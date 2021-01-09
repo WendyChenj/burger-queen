@@ -1,0 +1,15 @@
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Cookie&family=Passion+One:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+
+$passion-one: 'Passion One', cursive;
+$font-cookie: 'Cookie', cursive;
+$font-stack: 'Roboto', sans-serif;
+
+$black-color: #000000;
+$white-color: #ffffff;
+$tropical-rain-forest-color: #007f5f;
+$sun-color: #f28f3b;
+
+body {
+  font-family: $font-stack;
+  text-align: center;
+}
