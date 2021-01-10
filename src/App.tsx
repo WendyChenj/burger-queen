@@ -4,9 +4,9 @@ import Homepage from './pages/Homepage/Homepage';
 import BurgerOrder from './pages/BurgerOrder/BurgerOrder';
 
 import { library } from '@fortawesome/fontawesome-svg-core';
-import { faUserCircle, faCartPlus } from '@fortawesome/free-solid-svg-icons';
+import { faUserCircle, faCartPlus, faDollarSign } from '@fortawesome/free-solid-svg-icons';
 
-library.add(faUserCircle, faCartPlus);
+library.add(faUserCircle, faCartPlus, faDollarSign);
 
 function App(): JSX.Element {
   return (
