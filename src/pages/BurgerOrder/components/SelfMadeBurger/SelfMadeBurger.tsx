@@ -1,21 +1,24 @@
 import React from 'react';
-import * as types from '../../../../common/models/types';
+import * as customBurgerTypes from '../../../../common/models/customBurgerTypes';
 import { useSelector, useDispatch } from 'react-redux';
 import { RootState } from '../../../../common/store/store';
 import { chooseBurgerBread } from '../../../../common/store/customBurgerStore/customBurgerActionCreators';
 import Ingredient from '../Ingredient/Ingredient';
-import IngredientsContainer from './IngredientsContainer/IngredientsContainer';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import './selfMadeBurger.scss';
 
 const SelfMadeBurger = (): JSX.Element => {
-  const { bread } = useSelector((state: RootState) => ({
+  const { bread, meat, vegetable, cheese, sauce } = useSelector((state: RootState) => ({
     bread: state.customBurger.bread,
+    meat: state.customBurger.meat,
+    vegetable: state.customBurger.vegetable,
+    cheese: state.customBurger.cheese,
+    sauce: state.customBurger.sauce,
   }));
 
   const dispatch = useDispatch();
 
-  const handleBreadChange = (event: React.MouseEvent, breadName: types.Bread): void => {
+  const handleBreadChange = (event: React.MouseEvent, breadName: customBurgerTypes.Bread): void => {
     event.preventDefault;
 
     if (bread !== breadName) {
