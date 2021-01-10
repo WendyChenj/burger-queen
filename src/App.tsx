@@ -10,16 +10,14 @@ library.add(faUserCircle, faCartPlus, faDollarSign);
 
 function App(): JSX.Element {
   return (
-    <div className="app-container">
-      <Switch>
-        <Route path="/order">
-          <BurgerOrder />
-        </Route>
-        <Route path="/">
-          <Homepage />
-        </Route>
-      </Switch>
-    </div>
+    <Switch>
+      <Route path="/order">
+        <BurgerOrder />
+      </Route>
+      <Route path="/">
+        <Homepage />
+      </Route>
+    </Switch>
   );
 }
 
