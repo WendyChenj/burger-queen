@@ -1,5 +1,5 @@
 import { Action } from 'redux';
-import { BurgerState } from '../../models/types';
+import { BurgerState } from '../../models/customBurgerTypes';
 import { CustomBurgerActionTypes, CHOOSE_BURGER_BREAD } from './customBurgerActionTypes';
 
 const initialState: BurgerState = {
