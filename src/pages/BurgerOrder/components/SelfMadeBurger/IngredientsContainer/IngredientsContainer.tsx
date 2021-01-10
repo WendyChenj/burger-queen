@@ -1,9 +1,7 @@
-import React, { useState } from 'react';
+import React from 'react';
 import './ingsContainer.scss';
 
-const IngredientsContainer = () => {
-  const [ing, setIng] = useState('hamburger');
-
+const IngredientsContainer = (): JSX.Element => {
   return (
     <div className="ingredients-container">
       <h4>1. Choose your bread:</h4>

@@ -5,7 +5,7 @@ type Props = {
   ingType: string;
 };
 
-const Ingredient = ({ ingType }: Props) => {
+const Ingredient = ({ ingType }: Props): JSX.Element => {
   let ingredient = null;
 
   switch (ingType) {
@@ -20,13 +20,8 @@ const Ingredient = ({ ingType }: Props) => {
     case 'burgerBottom':
       ingredient = <div className="burgerBottom"></div>;
       break;
-    case 'sandwichTop':
-      ingredient = (
-        <div className="sandwitchTop">
-          <div className="seeds1"></div>
-          <div className="seeds2"></div>
-        </div>
-      );
+    case 'sandwitchTop':
+      ingredient = <div className="sandwitchTop"></div>;
       break;
     case 'sandwitchBottom':
       ingredient = <div className="sandwitchBottom"></div>;

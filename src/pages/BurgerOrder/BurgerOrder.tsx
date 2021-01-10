@@ -5,7 +5,7 @@ import SelfMadeBurger from './components/SelfMadeBurger/SelfMadeBurger';
 import ExistingBurger from './components/ExistingBurger/ExistingBurger';
 import './burgerOrder.scss';
 
-const BurgerOrder = () => {
+const BurgerOrder = (): JSX.Element => {
   return (
     <Layout>
       <Switch>

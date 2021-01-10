@@ -2,11 +2,13 @@ import { createStore, combineReducers, applyMiddleware, compose, Action } from '
 import { composeWithDevTools } from 'redux-devtools-extension';
 import thunk, { ThunkAction } from 'redux-thunk';
 import authReducer from './authStore/authReducer';
+import customBurgerReducer from './customBurgerStore/customBurgerReducer';
 
 const composeEnhancers = composeWithDevTools({}) || compose;
 
 const rootReducer = combineReducers({
   auth: authReducer,
+  customBurger: customBurgerReducer,
 });
 
 export type RootState = ReturnType<typeof rootReducer>;

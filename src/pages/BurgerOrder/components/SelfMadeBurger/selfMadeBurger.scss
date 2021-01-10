@@ -43,3 +43,37 @@
     margin: 0 8px;
   }
 }
+
+.ingredients-container {
+  width: 600px;
+  margin: auto;
+  border: 1px solid #c4c4c4;
+  padding: 0 32px 16px;
+
+  h4 {
+    font-size: 1.25rem;
+  }
+}
+
+%button-ing {
+  padding: 8px 16px;
+  margin: 0 20px;
+  border: none;
+  background-color: $ingredient-button-color;
+  font-size: 1.05rem;
+  font-weight: 600;
+}
+
+button.ing-button {
+  @extend %button-ing;
+}
+
+button.ing-button-active {
+  @extend %button-ing;
+  background-color: $sun-color;
+}
+
+button:hover {
+  cursor: pointer;
+  background-color: $sun-color;
+}
