@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ExistingBurger = () => {
+const ExistingBurger = (): JSX.Element => {
   return (
     <div className="self-made-container">
       <div className="burger">existing</div>
