@@ -3,13 +3,43 @@
 .self-made-container {
   width: 100%;
 
-  .burger-container {
-    overflow: scroll;
-    height: 320px;
-    margin: 64px 0;
-    border: 1px solid black;
+  .self-made-ingredients-container {
+    background-color: $custom-ingredients-container;
+    padding: 32px 0;
+    height: 286px;
+  }
+}
+
+.burger-container {
+  overflow: scroll;
+  height: 384px;
+  margin: 64px 0;
+  border: 1px solid black;
+  position: relative;
+
+  .price-box-container {
+    position: absolute;
+    top: 100px;
+    height: 40px;
+    width: 160px;
+    background-color: #ffdd00;
+    color: $black-color;
+  }
+}
+
+.price-and-icon {
+  height: 100%;
+  font-weight: 700;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+
+  p {
+    margin: 0;
   }
 
-  .ingredients-container {
+  span.price-colon {
+    margin: 0 8px;
   }
 }

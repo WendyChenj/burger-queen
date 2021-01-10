@@ -1,7 +1,7 @@
 @import '../../../../scss/global';
 
 .burgerTop {
-  height: 60px;
+  height: 64px;
   width: 280px;
   background: linear-gradient(#bc581e, #e27b36);
   border-radius: 50% 50% 0 0;
@@ -11,7 +11,7 @@
 }
 
 .burgerBottom {
-  height: 60px;
+  height: $navbar-height;
   width: 300px;
   background: linear-gradient(#f08e4a, #e27b36);
   border-radius: 0 0 30px 30px;
@@ -20,7 +20,7 @@
 }
 
 .sandwitchTop {
-  height: 64px;
+  height: $navbar-height;
   width: 300px;
   background: linear-gradient(#bc581e, #e27b36);
   border-radius: 30px 30px 0 0;
@@ -30,7 +30,7 @@
 }
 
 .sandwitchBottom {
-  height: 60px;
+  height: $navbar-height;
   width: 300px;
   background: linear-gradient(#f08e4a, #e27b36);
   border-radius: 0 0 30px 30px;
