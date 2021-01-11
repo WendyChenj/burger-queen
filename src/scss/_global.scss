@@ -104,5 +104,6 @@ $directions: (top, right, bottom, left);
   background: $light-medium;
   &:hover {
     background-color: $light-medium;
+    cursor: auto;
   }
 }
