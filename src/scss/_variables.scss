@@ -1,0 +1,96 @@
+// Used to hold all sass variables
+// This file is expected to be imported by all partials,
+// to be used in Material-UI components overrides,
+// as well as impoted into component-specific scss files
+@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Cookie&family=Passion+One:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+@use 'sass:color';
+@use 'sass:math';
+
+// Colors:
+
+$primary-red-dark: #bf3100;
+$primary-red-light: #ff4e00;
+$secondary-green: #8ea604;
+$farm-yellow-dark: #ec9f05;
+$farm-yellow-light: #f5bb00;
+
+// Common Colors:
+
+$white: #ffffff;
+$light: #f7f8fb;
+$light-medium: #e5e5e5;
+$color-medium: #949494;
+$medium-dark: #606060;
+$dark: #4a4a4a;
+$black: #0a0a0a;
+$spring-green: #8ea604;
+$tropical-rain-forest-color: #007f5f;
+$sun-color: #f28f3b;
+$custom-ingredients-container: #fbd1a2;
+$ingredient-button-color: #fc9f5b;
+
+// Product Use Color:
+
+$primary: $primary-red-dark;
+$secondary: $secondary-green;
+$tertiary: $farm-yellow-dark;
+$disabled: $color-medium;
+$primary-disabled: transparentize($primary, 0.5);
+$secondary-disabled: transparentize($secondary, 0.5);
+$tertiary-disabled: transparentize($tertiary, 0.5);
+
+// Fonts:
+
+$primary-font-family: 'Roboto', sans-serif;
+$secondary-font-family: 'Cookie', cursive;
+$tertiary-font-family: 'Passion One', cursive;
+
+$primary-font-color: $black;
+$secondary-font-clor: $black;
+
+$font-20px: 125%;
+$font-18px: 112.5%;
+$font-16px: 100%;
+$font-14px: 87.5%;
+$font-12px: 75%;
+$font-10px: 62.5%;
+
+$default-font-size: $font-14px; // TBD
+
+$font-weight-regular: 400;
+$font-weight-medium: 500;
+$font-weight-semi-bold: 600;
+$font-weight-bold: 700;
+
+// Space and Sizing:
+
+// Generally for text allowances in buttons, divs and inline items
+
+$zero: 0;
+$xxxsmall: 0.25rem;
+$xxsmall: 0.5rem;
+$xsmall: 0.75rem;
+$small: 1rem;
+$small-medium: 1.5rem;
+$medium: 2rem;
+$large: 4rem;
+$xlarge: 8rem;
+$xxlarge: 10rem;
+$xxxlarge: 20rem;
+
+$space-sizes: (
+  'zero': '0',
+  'xxxsmall': '0.25rem',
+  'xxsmall': '0.5rem',
+  'xsmall': '0.75rem',
+  'small': '1rem',
+  'small-medium': '1.5rem',
+  'medium': '2rem',
+  'large': '4rem',
+  'xlarge': '8rem',
+  'xxlarge': '10rem',
+  'xxxlarge': '20rem',
+);
+
+// Nav Bar
+$navbar-height: 2.5rem;

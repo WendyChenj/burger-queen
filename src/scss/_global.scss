@@ -1,19 +1,59 @@
-@import url('https://fonts.googleapis.com/css2?family=East+Sea+Dokdo&family=Cookie&family=Passion+One:wght@400;700&family=Roboto:wght@400;500;700&display=swap');
+@import './variables';
 
-$passion-one: 'Passion One', cursive;
-$font-cookie: 'Cookie', cursive;
-$font-stack: 'Roboto', sans-serif;
-
-$black-color: #000000;
-$white-color: #ffffff;
-$tropical-rain-forest-color: #007f5f;
-$sun-color: #f28f3b;
-$custom-ingredients-container: #fbd1a2;
-$ingredient-button-color: #fc9f5b;
-
-$navbar-height: 40px;
+html,
+body {
+  height: 100%;
+}
 
 body {
-  font-family: $font-stack;
+  margin: 0;
+  font-family: $primary-font-family, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell',
+    'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+}
+
+// Margin and Padding maker uses $space-sizes from variables.scss
+// Output: Margin and Padding classes per direction/size
+// m = margin, p = padding
+// t = top, r = right, b = bottom, l = left
+// a = all and applies the size margin or padding to all directions
+// OUTPUT FOR SIZE SMALL: (see variables.scss to add to available sizes)
+/* .m-t-small .p-t-small
+   .m-r-small .p-r-small
+   .m-l-small .p-l-small
+   .m-b-small .p-b-small
+   .m-a-small .p-a-small
+*/
+$directions: (top, right, bottom, left);
+@each $name, $size in $space-sizes {
+  @each $dir in $directions {
+    .m-#{str-slice($dir, 0, 1)}-#{name} {
+      margin-#{dir}: #{$size}; // rem is included in map
+    }
+
+    .p-#{str-slice($dir, 0, 1)}-#{name} {
+      padding-#{dir}: #{$size}; // rem is included in map
+    }
+  }
+
+  .m-a-#{$name} {
+    margin: #{$size};
+  }
+
+  .p-a-#{$name} {
+    padding: #{$size};
+  }
+}
+
+.w-100 {
+  width: 100%;
+}
+
+.text-center {
   text-align: center;
 }

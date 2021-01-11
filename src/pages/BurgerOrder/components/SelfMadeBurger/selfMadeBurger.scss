@@ -1,4 +1,4 @@
-@import '../../../../scss/global';
+@import '../../../../scss/variables';
 
 .self-made-container {
   width: 100%;
@@ -23,7 +23,7 @@
     height: 40px;
     width: 160px;
     background-color: #ffdd00;
-    color: $black-color;
+    color: $black;
   }
 }
 

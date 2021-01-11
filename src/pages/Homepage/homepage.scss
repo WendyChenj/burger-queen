@@ -1,7 +1,7 @@
-@import '../../scss/global';
+@import '../../scss/variables';
 
 .container {
-  font-family: $passion-one;
+  font-family: $tertiary-font-family;
   position: relative;
   height: 100vh;
   overflow: scroll;
@@ -54,16 +54,12 @@
     }
   }
 
-  button {
-    font-family: $font-cookie;
-    font-size: 2rem;
-    color: #ffffff;
-    background-color: #000000;
-    padding: 16px 40px;
-    border: none;
+  Button {
+    font-family: $secondary-font-family;
+    font-size: 1.5rem;
   }
 
-  button:hover {
+  Button:hover {
     cursor: pointer;
   }
 }

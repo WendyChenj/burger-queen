@@ -1,3 +1,4 @@
+import { Button } from '@material-ui/core';
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
@@ -12,7 +13,7 @@ function Homepage(): JSX.Element {
   };
 
   return (
-    <div className="container">
+    <div className="container text-center">
       <div className="burgerBackground"></div>
       <div className="main">
         <h1>Welcome to Burger Queen</h1>
@@ -23,7 +24,10 @@ function Homepage(): JSX.Element {
 
         <h4 className="intro-2">Don’t forget to check daily deals! Save your money by applying coupons!</h4>
 
-        <button onClick={(event: React.MouseEvent) => redirectToOrder(event)}>Start to order</button>
+        <Button onClick={(event: React.MouseEvent) => redirectToOrder(event)} variant="contained" color="primary">
+          Start to order
+        </Button>
+        {/* <button></button> */}
       </div>
     </div>
   );

@@ -1,4 +1,4 @@
-@import '../../../scss/global';
+@import '../../../scss/variables';
 
 .app-bar-container {
   width: 100%;
@@ -64,7 +64,7 @@
   }
 
   a {
-    color: $white-color;
+    color: $white;
     text-decoration: none;
     padding: 0 16px;
   }
