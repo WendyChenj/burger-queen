@@ -5,6 +5,7 @@ import { RootState } from '../../../../common/store/store';
 import Ingredient from '../Ingredient/Ingredient';
 import BurgerBuilder from '../BurgerBuilder/BurgerBuilder';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { Button } from '@material-ui/core';
 import './selfMadeBurger.scss';
 
 const SelfMadeBurger = (): JSX.Element => {
@@ -14,7 +15,7 @@ const SelfMadeBurger = (): JSX.Element => {
     vegetable: state.customBurger.vegetable,
     cheese: state.customBurger.cheese,
     sauce: state.customBurger.sauce,
-    price: state.customBurger.price,
+    price: state.customBurger.totalPrice,
   }));
 
   const [buildState, setBuildState] = useState(1);
@@ -59,33 +60,41 @@ const SelfMadeBurger = (): JSX.Element => {
 
   return (
     <div className="self-made-container">
-      <div className="burger-container">
-        <div className="price-box-container">
+      <div className="burger-container m-t-large m-b-large">
+        <div className="price-box-container p-t-small p-b-small p-r-medium p-l-medium">
           <div className="price-and-icon">
             <FontAwesomeIcon icon="dollar-sign" size="lg" />
-            <p>
-              <span className="price-colon">:</span>
+            <p className="m-a-zero">
+              <span className="m-r-xxsmall m-l-xxsmall">:</span>
               {price.toFixed(1)}
             </p>
           </div>
         </div>
         <Ingredient ingType={bread === 'sandwitch' ? 'sandwitchTop' : 'burgerTop'} />
+        {burgerSauce}
+        {burgerCheese}
         {burgerMeat}
         {burgerVegetable}
-        {burgerCheese}
-        {burgerSauce}
         <Ingredient ingType={bread === 'sandwitch' ? 'sandwitchBottom' : 'burgerBottom'} />
       </div>
 
-      <div className="self-made-ingredients-container">
-        <div className="ingredients-container">
+      <div className="self-made-ingredients-container p-t-medium p-b-medium">
+        <div className="ingredients-container p-b-small text-center">
           <BurgerBuilder buildState={buildState} />
-          <button onClick={(e: React.MouseEvent) => handlePrevButton(e)} disabled={buildState === 1 ? true : false}>
+          <Button
+            onClick={(e: React.MouseEvent) => handlePrevButton(e)}
+            disabled={buildState === 1 ? true : false}
+            className="m-t-medium m-r-large"
+          >
             Previous
-          </button>
-          <button onClick={(e: React.MouseEvent) => handleNextButton(e)} disabled={buildState === 5 ? true : false}>
+          </Button>
+          <Button
+            onClick={(e: React.MouseEvent) => handleNextButton(e)}
+            disabled={buildState === 5 ? true : false}
+            className="m-t-medium"
+          >
             Next
-          </button>
+          </Button>
         </div>
       </div>
     </div>

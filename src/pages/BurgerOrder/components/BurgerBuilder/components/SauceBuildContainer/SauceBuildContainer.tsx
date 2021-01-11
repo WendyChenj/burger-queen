@@ -5,6 +5,8 @@ import {
   removeBurgerSauce,
 } from '../../../../../../common/store/customBurgerStore/customBurgerActionCreators';
 import { Sauce } from '../../../../../../common/models/customBurgerTypes';
+import { Box, Button } from '@material-ui/core';
+import './sauceBuildContainer.scss';
 
 type SauceTypes = {
   sauce: Sauce[];
@@ -25,18 +27,26 @@ const SauceBuildContainer = ({ sauce }: SauceTypes): JSX.Element => {
 
   return (
     <div>
-      <h4>5. Choose your sauce:</h4>
-      {sauce.map((ele: Sauce) => (
-        <div key={ele.name}>
-          <button disabled={ele.choose} onClick={(e: React.MouseEvent) => handleAddSauce(e, ele.name)}>
-            +
-          </button>
-          <p>{ele.name}</p>
-          <button disabled={!ele.choose} onClick={(e: React.MouseEvent) => handleRemoveSauce(e, ele.name)}>
-            -
-          </button>
-        </div>
-      ))}
+      <h4 className="font-small-medium">5. Choose your sauce:</h4>
+      <div className="sauce-button-container">
+        {sauce.map((ele: Sauce) => (
+          <div key={ele.name}>
+            <Button
+              className={ele.choose ? 'button-disabled' : 'button-nonactive'}
+              onClick={(e: React.MouseEvent) => handleAddSauce(e, ele.name)}
+            >
+              +
+            </Button>
+            <Box className="ingre-name m-b-xxsmall m-t-xxsmall">{ele.name}</Box>
+            <Button
+              className={!ele.choose ? 'button-disabled' : 'button-nonactive'}
+              onClick={(e: React.MouseEvent) => handleRemoveSauce(e, ele.name)}
+            >
+              -
+            </Button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

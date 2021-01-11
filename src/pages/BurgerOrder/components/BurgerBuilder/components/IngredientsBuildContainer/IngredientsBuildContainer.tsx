@@ -9,6 +9,8 @@ import {
   removeBurgerCheese,
 } from '../../../../../../common/store/customBurgerStore/customBurgerActionCreators';
 import { Meat, Vegetable, Cheese } from '../../../../../../common/models/customBurgerTypes';
+import { Box, Button } from '@material-ui/core';
+import './ingresBuildContainer.scss';
 
 type Ingredient = Meat[] | Vegetable[] | Cheese[];
 
@@ -67,27 +69,41 @@ const IngredientsBuildContainer = ({ buildState, title, ingre }: IngredientsType
   };
   return (
     <div>
-      <h4>
+      <h4 className="font-small-medium">
         {buildState}. Choose your {title}:
       </h4>
-      {ingre.map((ele: EachIngredientType) => (
-        <div key={ele.name}>
-          <p>{ele.name}</p>
-          <button
-            onClick={(e: React.MouseEvent) => handleAddButton(e, buildState, ele.name, ele.amount)}
-            disabled={ele.amount === 3 ? true : false}
-          >
-            +
-          </button>
-          <span>{ele.amount}</span>
-          <button
-            onClick={(e: React.MouseEvent) => handleRemoveButton(e, buildState, ele.name, ele.amount)}
-            disabled={ele.amount === 0 ? true : false}
-          >
-            -
-          </button>
-        </div>
-      ))}
+      <div className="ingres-button-container">
+        {ingre.map((ele: EachIngredientType) => (
+          <div key={ele.name}>
+            <Box className="ingre-name m-b-small">
+              {ele.name} (${ele.price})
+            </Box>
+            <Button
+              className={
+                ele.amount === 3
+                  ? 'button-disabled font-weight-bold p-a-zero p-t-xxxsmall p-b-xxxsmall m-r-xxxsmall'
+                  : 'button-nonactive font-weight-bold p-a-zero p-t-xxxsmall p-b-xxxsmall m-r-xxxsmall'
+              }
+              onClick={(e: React.MouseEvent) => handleAddButton(e, buildState, ele.name, ele.amount)}
+              disabled={ele.amount === 3 ? true : false}
+            >
+              +
+            </Button>
+            <span>{ele.amount}</span>
+            <Button
+              className={
+                ele.amount === 0
+                  ? 'button-disabled font-weight-bold p-a-zero p-t-xxxsmall p-b-xxxsmall m-l-xxxsmall'
+                  : 'button-nonactive font-weight-bold p-a-zero p-t-xxxsmall p-b-xxxsmall m-l-xxxsmall'
+              }
+              onClick={(e: React.MouseEvent) => handleRemoveButton(e, buildState, ele.name, ele.amount)}
+              disabled={ele.amount === 0 ? true : false}
+            >
+              -
+            </Button>
+          </div>
+        ))}
+      </div>
     </div>
   );
 };

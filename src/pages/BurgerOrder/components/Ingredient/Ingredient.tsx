@@ -44,7 +44,7 @@ const Ingredient = ({ ingType }: Props): JSX.Element => {
     case 'lettuce':
       ingredient = <div className="lettuce"></div>;
       break;
-    case 'pickel':
+    case 'pickle':
       ingredient = <div className="pickle"></div>;
       break;
     case 'white processed cheddar':
