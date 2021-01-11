@@ -103,7 +103,7 @@
 
 .beef {
   height: 20px;
-  width: 80%;
+  width: 280px;
   background: linear-gradient(#7f3608, #702e05);
   margin: 2px auto;
   border-radius: 16px;
@@ -111,7 +111,7 @@
 
 .chicken {
   height: 20px;
-  width: 80%;
+  width: 280px;
   background: linear-gradient(#f3d5b5, #e7bc91);
   margin: 2px auto;
   border-radius: 16px;
@@ -119,7 +119,7 @@
 
 .ham {
   height: 10px;
-  width: 80%;
+  width: 280px;
   background: linear-gradient(#ffedd8, #f3d5b5);
   margin: 2px auto;
   border-radius: 16px;
@@ -127,14 +127,14 @@
 
 .bacon {
   height: 10px;
-  width: 80%;
+  width: 280px;
   background: linear-gradient(#bf3813, #c45e38);
   margin: 2px auto;
   border-radius: 16px;
 }
 
 .lettuce {
-  width: 85%;
+  width: 280px;
   height: 12px;
   margin: 2px auto;
   background: linear-gradient(#228c1d, #91ce50);
@@ -142,7 +142,7 @@
 }
 
 .tomato {
-  width: 85%;
+  width: 280px;
   height: 12px;
   margin: 2px auto;
   background: linear-gradient(#d00000, #dc2f02);
@@ -150,9 +150,41 @@
 }
 
 .pickle {
-  width: 85%;
+  width: 280px;
   height: 12px;
   margin: 2px auto;
   background: linear-gradient(#081c15, #1b4332);
+  border-radius: 16px;
+}
+
+.white-processed-cheese {
+  width: 280px;
+  height: 2px;
+  margin: 2px auto;
+  background: linear-gradient(#e5e5e5, #ffffff);
+  border-radius: 16px;
+}
+
+.shredded-monterey-cheddar {
+  width: 280px;
+  height: 2px;
+  margin: 2px auto;
+  background: linear-gradient(#fdffb6, #fdef9b);
+  border-radius: 16px;
+}
+
+.mayo {
+  width: 280px;
+  height: 2px;
+  margin: 2px auto;
+  background: linear-gradient(#ffd6a5, #ffc885);
+  border-radius: 16px;
+}
+
+.mustard {
+  width: 280px;
+  height: 2px;
+  margin: 2px auto;
+  background: #fdffb6;
   border-radius: 16px;
 }

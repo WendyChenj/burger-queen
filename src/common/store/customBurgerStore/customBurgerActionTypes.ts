@@ -19,4 +19,53 @@ export interface ChooseBurgerBread {
   bread: customBurgerTypes.Bread;
 }
 
-export type CustomBurgerActionTypes = ChooseBurgerBread;
+export interface AddBurgerMeat {
+  type: typeof ADD_BURGER_MEAT;
+  meatName: string;
+}
+
+export interface RemoveBurgerMeat {
+  type: typeof REMOVE_BURGER_MEAT;
+  meatName: string;
+}
+
+export interface AddBurgerVegetable {
+  type: typeof ADD_BURGER_VEGETABLE;
+  vegName: string;
+}
+
+export interface RemoveBurgerVegetable {
+  type: typeof REMOVE_BURGER_VEGETABLE;
+  vegName: string;
+}
+
+export interface AddBurgerCheese {
+  type: typeof ADD_BURGER_CHEESE;
+  cheeseName: string;
+}
+
+export interface RemoveBurgerCheese {
+  type: typeof REMOVE_BURGER_CHEESE;
+  cheeseName: string;
+}
+
+export interface AddBurgerSauce {
+  type: typeof ADD_BURGER_SAUCE;
+  sauceName: string;
+}
+
+export interface RemoveBurgerSauce {
+  type: typeof REMOVE_BURGER_SAUCE;
+  sauceName: string;
+}
+
+export type CustomBurgerActionTypes =
+  | ChooseBurgerBread
+  | AddBurgerMeat
+  | AddBurgerVegetable
+  | AddBurgerCheese
+  | RemoveBurgerMeat
+  | RemoveBurgerVegetable
+  | RemoveBurgerCheese
+  | AddBurgerSauce
+  | RemoveBurgerSauce;

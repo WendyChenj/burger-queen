@@ -64,16 +64,16 @@
   font-weight: 600;
 }
 
-button.ing-button {
+.ing-button {
   @extend %button-ing;
 }
 
-button.ing-button-active {
+.ing-button-active {
   @extend %button-ing;
   background-color: $sun-color;
 }
 
-button:hover {
+.ing-button:hover {
   cursor: pointer;
   background-color: $sun-color;
 }
