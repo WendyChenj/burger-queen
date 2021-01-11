@@ -1,16 +1,13 @@
 export type Bread = 'hamburger' | 'sandwitch';
 
 export interface Vegetable {
-  tomato: number;
-  pickle: number;
-  lettuce: number;
+  name: string;
+  amount: number;
 }
 
 export interface Meat {
-  beef: number;
-  chicken: number;
-  bacon: number;
-  ham: number;
+  name: string;
+  amount: number;
 }
 
 export interface Cheese {
@@ -23,10 +20,12 @@ export interface Sauce {
   choose: boolean;
 }
 
+export type price = number;
 export interface BurgerState {
   bread: Bread;
-  vegetable: Vegetable;
-  meat: Meat;
+  vegetable: Vegetable[];
+  meat: Meat[];
   cheese: Cheese[];
   sauce: Sauce[];
+  price: Price;
 }
