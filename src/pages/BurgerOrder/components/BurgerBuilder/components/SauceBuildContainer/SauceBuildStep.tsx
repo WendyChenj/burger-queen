@@ -6,13 +6,13 @@ import {
 } from '../../../../../../common/store/customBurgerStore/customBurgerActionCreators';
 import { Sauce } from '../../../../../../common/models/customBurgerTypes';
 import { Box, Button } from '@material-ui/core';
-import './sauceBuildContainer.scss';
+import './sauceBuildStep.scss';
 
 type SauceTypes = {
   sauce: Sauce[];
 };
 
-const SauceBuildContainer = ({ sauce }: SauceTypes): JSX.Element => {
+const SauceBuildStep = ({ sauce }: SauceTypes): JSX.Element => {
   const dispatch = useDispatch();
 
   const handleAddSauce = (e: React.MouseEvent, sauceName: string) => {
@@ -27,7 +27,7 @@ const SauceBuildContainer = ({ sauce }: SauceTypes): JSX.Element => {
 
   return (
     <div>
-      <h4 className="font-small-medium">5. Choose your sauce:</h4>
+      <h4 className="font-size-20px">5. Choose your sauce:</h4>
       <div className="sauce-button-container">
         {sauce.map((ele: Sauce) => (
           <div key={ele.name}>
@@ -51,4 +51,4 @@ const SauceBuildContainer = ({ sauce }: SauceTypes): JSX.Element => {
   );
 };
 
-export default SauceBuildContainer;
+export default SauceBuildStep;

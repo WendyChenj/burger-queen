@@ -51,10 +51,32 @@ $directions: (top, right, bottom, left);
 }
 
 // font size
-@each $name, $size in $space-sizes {
-  .font-#{$name} {
-    font-size: #{$size};
-  }
+.font-size-24px {
+  font-size: $font-24px;
+}
+
+.font-size-20px {
+  font-size: $font-20px;
+}
+
+.font-size-18px {
+  font-size: $font-18px;
+}
+
+.font-size-16px {
+  font-size: $font-16px;
+}
+
+.font-size-14px {
+  font-size: $font-14px;
+}
+
+.font-size-12px {
+  font-size: $font-12px;
+}
+
+.font-size-10px {
+  font-size: $font-10px;
 }
 
 //font-weight

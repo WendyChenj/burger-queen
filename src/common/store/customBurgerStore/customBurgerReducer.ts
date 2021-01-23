@@ -78,8 +78,9 @@ const initialState: BurgerState = {
   totalPrice: 2.0,
 };
 
+let ingPrice = 0;
+
 const customBurgerReducer = (state: BurgerState = initialState, action: CustomBurgerActionTypes): BurgerState => {
-  let ingPrice = 0;
   switch (action.type) {
     case CHOOSE_BURGER_BREAD:
       return {

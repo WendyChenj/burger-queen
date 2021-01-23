@@ -2,9 +2,9 @@ import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../../../common/store/store';
 
-import BreadBuildContainer from './components/BreadBuildContainer/BreadBuilderContainer';
-import IngredientsBuildContainer from './components/IngredientsBuildContainer/IngredientsBuildContainer';
-import SauceBuildContainer from './components/SauceBuildContainer/SauceBuildContainer';
+import BreadBuildStep from './components/BreadBuildStep/BreadBuilderStep';
+import IngredientsBuildStep from './components/IngredientsBuildStep/IngredientsBuildStep';
+import SauceBuildStep from './components/SauceBuildContainer/SauceBuildStep';
 
 type Props = {
   buildState: number;
@@ -23,19 +23,19 @@ const BurgerBuilder = ({ buildState }: Props): JSX.Element => {
 
   switch (buildState) {
     case 1:
-      burgerBuilder = <BreadBuildContainer bread={bread} />;
+      burgerBuilder = <BreadBuildStep bread={bread} />;
       break;
     case 2:
-      burgerBuilder = <IngredientsBuildContainer buildState={buildState} title="meat" ingre={meat} />;
+      burgerBuilder = <IngredientsBuildStep buildState={buildState} title="meat" ingre={meat} />;
       break;
     case 3:
-      burgerBuilder = <IngredientsBuildContainer buildState={buildState} title="vegetable" ingre={vegetable} />;
+      burgerBuilder = <IngredientsBuildStep buildState={buildState} title="vegetable" ingre={vegetable} />;
       break;
     case 4:
-      burgerBuilder = <IngredientsBuildContainer buildState={buildState} title="cheese" ingre={cheese} />;
+      burgerBuilder = <IngredientsBuildStep buildState={buildState} title="cheese" ingre={cheese} />;
       break;
     case 5:
-      burgerBuilder = <SauceBuildContainer sauce={sauce} />;
+      burgerBuilder = <SauceBuildStep sauce={sauce} />;
       break;
     default:
       burgerBuilder = null;

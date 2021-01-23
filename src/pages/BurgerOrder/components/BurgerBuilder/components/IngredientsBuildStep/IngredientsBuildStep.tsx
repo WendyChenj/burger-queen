@@ -10,7 +10,7 @@ import {
 } from '../../../../../../common/store/customBurgerStore/customBurgerActionCreators';
 import { Meat, Vegetable, Cheese } from '../../../../../../common/models/customBurgerTypes';
 import { Box, Button } from '@material-ui/core';
-import './ingresBuildContainer.scss';
+import './ingresBuildStep.scss';
 
 type Ingredient = Meat[] | Vegetable[] | Cheese[];
 
@@ -22,10 +22,10 @@ type IngredientsTypes = {
   ingre: Ingredient;
 };
 
-const IngredientsBuildContainer = ({ buildState, title, ingre }: IngredientsTypes): JSX.Element => {
+const IngredientsBuildStep = ({ buildState, title, ingre }: IngredientsTypes): JSX.Element => {
   const dispatch = useDispatch();
 
-  const handleAddButton = (event: React.MouseEvent, buildState: number, ingName: string, ingAmount: number): void => {
+  const handleAddButton = (buildState: number, ingName: string, ingAmount: number): void => {
     event.preventDefault();
     if (ingAmount < 3) {
       switch (buildState) {
@@ -44,13 +44,7 @@ const IngredientsBuildContainer = ({ buildState, title, ingre }: IngredientsType
     }
   };
 
-  const handleRemoveButton = (
-    event: React.MouseEvent,
-    buildState: number,
-    ingName: string,
-    ingAmount: number,
-  ): void => {
-    event.preventDefault();
+  const handleRemoveButton = (buildState: number, ingName: string, ingAmount: number): void => {
     if (ingAmount >= 1) {
       switch (buildState) {
         case 2:
@@ -69,7 +63,7 @@ const IngredientsBuildContainer = ({ buildState, title, ingre }: IngredientsType
   };
   return (
     <div>
-      <h4 className="font-small-medium">
+      <h4 className="font-size-20px">
         {buildState}. Choose your {title}:
       </h4>
       <div className="ingres-button-container">
@@ -80,11 +74,10 @@ const IngredientsBuildContainer = ({ buildState, title, ingre }: IngredientsType
             </Box>
             <Button
               className={
-                ele.amount === 3
-                  ? 'button-disabled font-weight-bold p-a-zero p-t-xxxsmall p-b-xxxsmall m-r-xxxsmall'
-                  : 'button-nonactive font-weight-bold p-a-zero p-t-xxxsmall p-b-xxxsmall m-r-xxxsmall'
+                (ele.amount === 3 ? 'button-disabled' : 'button-nonactive') +
+                ' font-weight-bold p-a-zero p-t-xxxsmall p-b-xxxsmall m-r-xxxsmall'
               }
-              onClick={(e: React.MouseEvent) => handleAddButton(e, buildState, ele.name, ele.amount)}
+              onClick={() => handleAddButton(buildState, ele.name, ele.amount)}
               disabled={ele.amount === 3 ? true : false}
             >
               +
@@ -92,11 +85,10 @@ const IngredientsBuildContainer = ({ buildState, title, ingre }: IngredientsType
             <span>{ele.amount}</span>
             <Button
               className={
-                ele.amount === 0
-                  ? 'button-disabled font-weight-bold p-a-zero p-t-xxxsmall p-b-xxxsmall m-l-xxxsmall'
-                  : 'button-nonactive font-weight-bold p-a-zero p-t-xxxsmall p-b-xxxsmall m-l-xxxsmall'
+                (ele.amount === 0 ? 'button-disabled' : 'button-nonactive') +
+                ' font-weight-bold p-a-zero p-t-xxxsmall p-b-xxxsmall m-l-xxxsmall'
               }
-              onClick={(e: React.MouseEvent) => handleRemoveButton(e, buildState, ele.name, ele.amount)}
+              onClick={() => handleRemoveButton(buildState, ele.name, ele.amount)}
               disabled={ele.amount === 0 ? true : false}
             >
               -
@@ -108,4 +100,4 @@ const IngredientsBuildContainer = ({ buildState, title, ingre }: IngredientsType
   );
 };
 
-export default IngredientsBuildContainer;
+export default IngredientsBuildStep;

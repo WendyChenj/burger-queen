@@ -8,12 +8,10 @@ type Props = {
   bread: Bread;
 };
 
-const BreadBuildContainer = ({ bread }: Props): JSX.Element => {
+const BreadBuildStep = ({ bread }: Props): JSX.Element => {
   const dispatch = useDispatch();
 
-  const handleBreadChange = (event: React.MouseEvent, breadName: Bread): void => {
-    event.preventDefault;
-
+  const handleBreadChange = (breadName: Bread): void => {
     if (bread !== breadName) {
       dispatch(chooseBurgerBread(breadName));
     }
@@ -21,12 +19,12 @@ const BreadBuildContainer = ({ bread }: Props): JSX.Element => {
 
   return (
     <div>
-      <h4 className="font-small-medium">1. Choose your bread:</h4>
+      <h4 className="font-size-20px">1. Choose your bread:</h4>
       <Button
         variant="contained"
         size="large"
         className={bread === 'hamburger' ? 'button-active m-r-medium' : 'button-nonactive m-r-medium'}
-        onClick={(e: React.MouseEvent) => handleBreadChange(e, 'hamburger')}
+        onClick={() => handleBreadChange('hamburger')}
       >
         Hamburger
       </Button>
@@ -34,7 +32,7 @@ const BreadBuildContainer = ({ bread }: Props): JSX.Element => {
         variant="contained"
         size="large"
         className={bread === 'sandwitch' ? 'button-active' : 'button-nonactive'}
-        onClick={(e: React.MouseEvent) => handleBreadChange(e, 'sandwitch')}
+        onClick={() => handleBreadChange('sandwitch')}
       >
         Sandwitch
       </Button>
@@ -42,4 +40,4 @@ const BreadBuildContainer = ({ bread }: Props): JSX.Element => {
   );
 };
 
-export default BreadBuildContainer;
+export default BreadBuildStep;
