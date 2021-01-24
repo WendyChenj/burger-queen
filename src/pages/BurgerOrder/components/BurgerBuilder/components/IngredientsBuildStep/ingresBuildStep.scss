@@ -1,0 +1,14 @@
+@import '../../../../../../scss/variables';
+
+.ingres-button-container {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-between;
+}
+
+.ingre-name {
+  background-color: $primary-red-dark;
+  padding: $xsmall $small;
+  color: $white;
+  font-weight: $font-weight-medium;
+}

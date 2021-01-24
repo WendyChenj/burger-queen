@@ -32,12 +32,12 @@ code {
 $directions: (top, right, bottom, left);
 @each $name, $size in $space-sizes {
   @each $dir in $directions {
-    .m-#{str-slice($dir, 0, 1)}-#{name} {
-      margin-#{dir}: #{$size}; // rem is included in map
+    .m-#{str-slice($dir, 0, 1)}-#{$name} {
+      margin-#{$dir}: #{$size}; // rem is included in map
     }
 
-    .p-#{str-slice($dir, 0, 1)}-#{name} {
-      padding-#{dir}: #{$size}; // rem is included in map
+    .p-#{str-slice($dir, 0, 1)}-#{$name} {
+      padding-#{$dir}: #{$size}; // rem is included in map
     }
   }
 
@@ -50,10 +50,82 @@ $directions: (top, right, bottom, left);
   }
 }
 
+// font size
+.font-size-24px {
+  font-size: $font-24px;
+}
+
+.font-size-20px {
+  font-size: $font-20px;
+}
+
+.font-size-18px {
+  font-size: $font-18px;
+}
+
+.font-size-16px {
+  font-size: $font-16px;
+}
+
+.font-size-14px {
+  font-size: $font-14px;
+}
+
+.font-size-12px {
+  font-size: $font-12px;
+}
+
+.font-size-10px {
+  font-size: $font-10px;
+}
+
+//font-weight
+.font-weight-regular {
+  font-weight: $font-weight-regular;
+}
+
+.font-weight-medium {
+  font-weight: $font-weight-medium;
+}
+
+.font-weight-semi-bold {
+  font-weight: $font-weight-semi-bold;
+}
+
+.font-weight-bold {
+  font-weight: $font-weight-bold;
+}
+
 .w-100 {
   width: 100%;
 }
 
 .text-center {
   text-align: center;
+}
+
+// button style used for choosing ingredients
+.button-active {
+  background-color: $farm-yellow-dark;
+  color: $black;
+  &:hover {
+    cursor: auto;
+    background-color: $farm-yellow-dark;
+  }
+}
+
+.button-nonactive {
+  background-color: $farm-yellow-light;
+  color: $black;
+  &:hover {
+    background-color: $farm-yellow-dark;
+  }
+}
+
+.button-disabled {
+  background: $light-medium;
+  &:hover {
+    background-color: $light-medium;
+    cursor: auto;
+  }
 }
