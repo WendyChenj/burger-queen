@@ -78,9 +78,8 @@ const initialState: BurgerState = {
   totalPrice: 2.0,
 };
 
-let ingPrice = 0;
-
 const customBurgerReducer = (state: BurgerState = initialState, action: CustomBurgerActionTypes): BurgerState => {
+  
   switch (action.type) {
     case CHOOSE_BURGER_BREAD:
       return {
@@ -88,9 +87,10 @@ const customBurgerReducer = (state: BurgerState = initialState, action: CustomBu
         bread: action.bread,
       };
     case ADD_BURGER_MEAT:
+      let addedMeatPrice = 0;
       const addedMeat = state.meat.map((ele: Meat) => {
         if (ele.name === action.meatName) {
-          ingPrice = ele.price;
+          addedMeatPrice = ele.price;
           return {
             ...ele,
             amount: (ele.amount += 1),
@@ -102,12 +102,13 @@ const customBurgerReducer = (state: BurgerState = initialState, action: CustomBu
       return {
         ...state,
         meat: addedMeat,
-        totalPrice: state.totalPrice + ingPrice,
+        totalPrice: state.totalPrice + addedMeatPrice,
       };
     case REMOVE_BURGER_MEAT:
+      let deductedMeatPrice = 0;
       const removedMeat = state.meat.map((ele: Meat) => {
         if (ele.name === action.meatName) {
-          ingPrice = ele.price;
+          deductedMeatPrice = ele.price;
           return {
             ...ele,
             amount: (ele.amount -= 1),
@@ -119,12 +120,13 @@ const customBurgerReducer = (state: BurgerState = initialState, action: CustomBu
       return {
         ...state,
         meat: removedMeat,
-        totalPrice: state.totalPrice - ingPrice,
+        totalPrice: state.totalPrice - deductedMeatPrice,
       };
     case ADD_BURGER_VEGETABLE:
+      let addedVegetablePrice = 0;
       const addedVeg = state.vegetable.map((ele: Vegetable) => {
         if (ele.name === action.vegName) {
-          ingPrice = ele.price;
+          addedVegetablePrice = ele.price;
           return {
             ...ele,
             amount: (ele.amount += 1),
@@ -136,12 +138,13 @@ const customBurgerReducer = (state: BurgerState = initialState, action: CustomBu
       return {
         ...state,
         vegetable: addedVeg,
-        totalPrice: state.totalPrice + ingPrice,
+        totalPrice: state.totalPrice + addedVegetablePrice,
       };
     case REMOVE_BURGER_VEGETABLE:
+      let deductedVegetablePrice = 0;
       const removedVeg = state.vegetable.map((ele: Vegetable) => {
         if (ele.name === action.vegName) {
-          ingPrice = ele.price;
+          deductedVegetablePrice = ele.price;
           return {
             ...ele,
             amount: (ele.amount -= 1),
@@ -153,12 +156,13 @@ const customBurgerReducer = (state: BurgerState = initialState, action: CustomBu
       return {
         ...state,
         vegetable: removedVeg,
-        totalPrice: state.totalPrice - ingPrice,
+        totalPrice: state.totalPrice - deductedVegetablePrice,
       };
     case ADD_BURGER_CHEESE:
+      let addedCheesePrice = 0;
       const addedCheese = state.cheese.map((ele: Cheese) => {
         if (ele.name === action.cheeseName) {
-          ingPrice = ele.price;
+          addedCheesePrice = ele.price;
           return {
             ...ele,
             amount: (ele.amount += 1),
@@ -170,12 +174,13 @@ const customBurgerReducer = (state: BurgerState = initialState, action: CustomBu
       return {
         ...state,
         cheese: addedCheese,
-        totalPrice: state.totalPrice + ingPrice,
+        totalPrice: state.totalPrice + addedCheesePrice,
       };
     case REMOVE_BURGER_CHEESE:
+      let deductedCheesePrice = 0;
       const removedCheese = state.cheese.map((ele: Cheese) => {
         if (ele.name === action.cheeseName) {
-          ingPrice = ele.price;
+          deductedCheesePrice = ele.price;
           return {
             ...ele,
             amount: (ele.amount -= 1),
@@ -187,7 +192,7 @@ const customBurgerReducer = (state: BurgerState = initialState, action: CustomBu
       return {
         ...state,
         cheese: removedCheese,
-        totalPrice: state.totalPrice - ingPrice,
+        totalPrice: state.totalPrice - deductedCheesePrice ,
       };
     case ADD_BURGER_SAUCE:
       const addedSauce = state.sauce.map((ele: Sauce) => {
