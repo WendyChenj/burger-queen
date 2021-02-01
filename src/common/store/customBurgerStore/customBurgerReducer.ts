@@ -79,7 +79,6 @@ const initialState: BurgerState = {
 };
 
 const customBurgerReducer = (state: BurgerState = initialState, action: CustomBurgerActionTypes): BurgerState => {
-  
   switch (action.type) {
     case CHOOSE_BURGER_BREAD:
       return {
@@ -192,7 +191,7 @@ const customBurgerReducer = (state: BurgerState = initialState, action: CustomBu
       return {
         ...state,
         cheese: removedCheese,
-        totalPrice: state.totalPrice - deductedCheesePrice ,
+        totalPrice: state.totalPrice - deductedCheesePrice,
       };
     case ADD_BURGER_SAUCE:
       const addedSauce = state.sauce.map((ele: Sauce) => {
