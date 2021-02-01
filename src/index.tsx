@@ -7,18 +7,31 @@ import { Provider } from 'react-redux';
 import { store } from './common/store/store';
 import { StylesProvider, ThemeProvider } from '@material-ui/core';
 import theme from './theme';
-// import reportWebVitals from './reportWebVitals';
+import { ApolloProvider, HttpLink, ApolloClient, InMemoryCache } from '@apollo/client';
+
+const graphQLink = new HttpLink({
+  uri: 'http://localhost:5000',
+});
+const cache = new InMemoryCache();
+const client = new ApolloClient({
+  link: graphQLink,
+  cache,
+  credentials: 'include',
+  resolvers: {},
+});
 
 ReactDOM.render(
-  <Provider store={store}>
-    <StylesProvider injectFirst>
-      <ThemeProvider theme={theme}>
-        <Router>
-          <App />
-        </Router>
-      </ThemeProvider>
-    </StylesProvider>
-  </Provider>,
+  <ApolloProvider client={client}>
+    <Provider store={store}>
+      <StylesProvider injectFirst>
+        <ThemeProvider theme={theme}>
+          <Router>
+            <App />
+          </Router>
+        </ThemeProvider>
+      </StylesProvider>
+    </Provider>
+  </ApolloProvider>,
   document.getElementById('root'),
 );
 
