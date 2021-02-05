@@ -10,7 +10,7 @@ import theme from './theme';
 import { ApolloProvider, HttpLink, ApolloClient, InMemoryCache } from '@apollo/client';
 
 const graphQLink = new HttpLink({
-  uri: 'http://localhost:5000',
+  uri: process.env.API_URL,
 });
 const cache = new InMemoryCache();
 const client = new ApolloClient({
